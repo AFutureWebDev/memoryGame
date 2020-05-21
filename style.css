@@ -21,8 +21,8 @@ header {
 h1 {
     font-family: 'Oleo Script', cursive;
     font-size: 5em;
-    color: #F7D650;
-    text-shadow: 4px 4px 4px black;
+    color: black;
+    text-shadow: 4px 4px 4px #8497BF;
     text-align: center;
     padding-top: 8px;
 }

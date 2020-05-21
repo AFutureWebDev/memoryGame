@@ -81,6 +81,7 @@ function createBoard() {
         let card = document.createElement('img');
         card.setAttribute('src', 'images/blank.png');
         card.setAttribute('data-id', i);
+        card.style.animation = 'rollIn 1s'
         card.addEventListener('click', flipCard);
         grid.appendChild(card);
     }
@@ -93,12 +94,16 @@ function checkForMatch() {
     let cards = document.querySelectorAll('img');
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
+
+    // Correct Match
     if(cardsChosen[0] === cardsChosen[1]) {
         cards[optionOneId].style.animation = 'tada .75s';
         cards[optionTwoId].style.animation = 'tada .75s';
         // cards[optionOneId].setAttribute('src','images/black.png');
         // cards[optionTwoId].setAttribute('src', 'images/black.png');
         cardsWon.push(cardsChosen);
+
+    // Incorrect Match
     } else {
         cards[optionOneId].setAttribute('src', 'images/blank.png');
         cards[optionTwoId].setAttribute('src', 'images/blank.png');
